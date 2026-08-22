@@ -1,0 +1,8 @@
+Model Architecture,Precision (%),Recall (%),F1-Score (%),mAP50 (%),mAP50-95 (%)
+YOLOv9 (Full Preprocessing),91.36,90.71,91.03,88.87,68.14
+YOLOv10 (Full Preprocessing),79.06,91.01,84.62,88.41,65.18
+YOLOv11 (+ Zero-DCE),89.98,88.57,89.27,90.6,68.73
+YOLOv12 (raw baseline),80.29,92.23,85.85,87.76,65.78
+YOLOv12 (+ CLAHE Preprocessing),79.15,91.4,84.84,86.92,64.35
+P2-YOLOv12 (raw),94.5,91.2,92.82,95.15,70.4
+P2-YOLOv12 Full (Proposed),95.8,93.15,94.46,97.25,71.85

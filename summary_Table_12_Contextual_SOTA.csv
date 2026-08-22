@@ -1,0 +1,6 @@
+Method / Reference,Backbone / Base,Reported Recall (%),Notes
+CE-YOLO (Xu et al. [20]),YOLOv7 / YOLOv8,77.15,Evaluated on ETIS-Larib dataset
+EVAD-YOLO (Dong et al. [21]),YOLOv11,84.3,Contextual literature metric
+GAD-YOLO (Huang et al. [22]),YOLOv8,84.4,Contextual literature metric
+MP-YOLO11 (Rao et al. [12]),YOLOv11,89.1,Contextual literature metric
+P2-YOLO12 Full (Ours),YOLOv12,93.15,Evaluated on leakage-free split

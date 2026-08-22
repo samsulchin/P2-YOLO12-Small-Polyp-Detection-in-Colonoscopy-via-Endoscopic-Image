@@ -1,0 +1,5 @@
+Configuration,Precision (%),Recall (%),F1-Score (%),mAP50 (%),mAP50-95 (%),AP_small (%),Recall_small (%),FN-Rate_small (%),AP_medium (%),AP_large (%)
+YOLO12 (raw) Baseline,72.1,75.3,73.67,68.45,48.5,18.75,25.0,75.0,52.1,71.2
+YOLO12 + Zero-DCE + SAI + DWT,78.4,82.5,80.4,76.1,55.2,25.0,31.25,68.75,58.4,79.5
+P2-YOLO12 (raw),81.2,84.6,82.87,78.5,58.75,31.25,37.5,62.5,60.1,81.3
+P2-YOLO12 + Zero-DCE + SAI + DWT (Proposed),88.5,89.2,88.85,85.25,64.3,43.75,50.0,50.0,68.3,87.4

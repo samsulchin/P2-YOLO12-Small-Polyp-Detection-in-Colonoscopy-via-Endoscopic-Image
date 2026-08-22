@@ -1,0 +1,6 @@
+Configuration,Parameters (Millions),Computational Cost (GFLOPs),Inference Time (ms/frame)
+YOLOv9,7.17,26.7,2.95
+YOLOv10,7.22,21.5,2.52
+YOLO11,9.41,21.4,2.55
+YOLO12 (Baseline),9.23,23.2,3.28
+P2-YOLO12 Full (Proposed),9.36,29.9,4.62

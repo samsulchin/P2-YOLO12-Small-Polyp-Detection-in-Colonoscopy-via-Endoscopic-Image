@@ -1,0 +1,5 @@
+Configuration,Precision %,Recall %,F1-Score %,mAP50 %,mAP50-95 %
+YOLO12 (raw) Baseline,-10.2%,-18.4%,-14.2%,-22.0%,-26.3%
+YOLO12+ Zero-DCE+SAI+ DWT,-6.6%,-7.2%,-6.9%,-12.0%,-16.2%
+P2-YOLO12 (raw),-14.1%,-7.2%,-10.7%,-17.5%,-16.5%
+P2-YOLO12 Full (Proposed),-7.6%,-4.2%,-5.9%,-12.3%,-10.5%

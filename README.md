@@ -35,7 +35,7 @@ Based on the provided implementation, the repository is structured as follows:
 
 To ensure the repository remains lightweight and easily cloneable, the heavy raw datasets and various preprocessed dataset versions are hosted externally on Google Drive.
 
-**Dataset Access:** [Google Drive Link](https://drive.google.com/drive/folders/1_MmclaB8WSUJOzyYqDVHdAoJw3BR3thf)
+**Best Weight Model and Dataset Access:** [Google Drive Link](https://drive.google.com/drive/folders/1_MmclaB8WSUJOzyYqDVHdAoJw3BR3thf)
 > **Note:** The datasets are available in "View Only" mode to prevent unauthorized redistribution of medical data. If you intend to download the datasets to reproduce this research, please request access via the Google Drive interface. Your email request will be reviewed, and download permissions will be granted accordingly.
 
 The Google Drive contains the following directories:

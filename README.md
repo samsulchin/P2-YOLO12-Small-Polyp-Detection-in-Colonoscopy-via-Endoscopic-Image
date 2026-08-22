@@ -28,15 +28,15 @@ Based on the provided implementation, the repository is structured as follows:
 *   `summary_Table_*.csv`: CSV files containing the complete summarized results of ablation studies, size-stratified evaluations, OOD performance, and SOTA comparisons as presented in the paper.
 *   `audit_out/`: Contains the audit trails and dataset split configurations (`manifest.csv`, `annotations.csv`, `splits.csv`).
 
-### 3. Pre-trained Models
-*   `model_p2_yolo12_full_seed42/`, `seed43/`, `seed44/`: Folders containing the pre-trained weights (`best.pt`) for the proposed method across 3 independent random seeds.
-
 ## Datasets and External Files
 
 To ensure the repository remains lightweight and easily cloneable, the heavy raw datasets and various preprocessed dataset versions are hosted externally on Google Drive.
 
 **Best Weight Model and Dataset Access:** [Google Drive Link](https://drive.google.com/drive/folders/1_MmclaB8WSUJOzyYqDVHdAoJw3BR3thf)
 > **Note:** The datasets are available in "View Only" mode to prevent unauthorized redistribution of medical data. If you intend to download the datasets to reproduce this research, please request access via the Google Drive interface. Your email request will be reviewed, and download permissions will be granted accordingly.
+
+### Pre-trained Models
+*   `model_p2_yolo12_full_seed42/`, `seed43/`, `seed44/`: Folders containing the pre-trained weights (`best.pt`) for the proposed method across 3 independent random seeds.
 
 The Google Drive contains the following directories:
 *   **Raw Datasets:** `CVC-ClinicDB`, `ETIS-LaribPolypDB`, `Kvasir-SEG`, `Polyp-Gen`

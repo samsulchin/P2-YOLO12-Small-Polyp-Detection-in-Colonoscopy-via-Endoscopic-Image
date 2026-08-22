@@ -35,12 +35,10 @@ To ensure the repository remains lightweight and easily cloneable, the heavy raw
 **Best Weight Model and Dataset Access:** [Google Drive Link](https://drive.google.com/drive/folders/1_MmclaB8WSUJOzyYqDVHdAoJw3BR3thf)
 > **Note:** The datasets are available in "View Only" mode to prevent unauthorized redistribution of medical data. If you intend to download the datasets to reproduce this research, please request access via the Google Drive interface. Your email request will be reviewed, and download permissions will be granted accordingly.
 
-### Pre-trained Models
-*   `model_p2_yolo12_full_seed42/`, `seed43/`, `seed44/`: Folders containing the pre-trained weights (`best.pt`) for the proposed method across 3 independent random seeds.
-
 The Google Drive contains the following directories:
 *   **Raw Datasets:** `CVC-ClinicDB`, `ETIS-LaribPolypDB`, `Kvasir-SEG`, `Polyp-Gen`
 *   **Preprocessed Datasets (YOLO Format):** `dataset_raw`, `dataset_zerodce`, `dataset_sai`, `dataset_dwt`, `dataset_zdce_sai`, `dataset_zdce_dwt`, `dataset_sai_dwt`, `dataset_full`
+*   ### Pre-trained Models  odel_p2_yolo12_full_seed42/`, `seed43/`, `seed44/`: Folders containing the pre-trained weights (`best.pt`) for the proposed method across 3 independent random seeds.
 
 ### Setup Instructions
 

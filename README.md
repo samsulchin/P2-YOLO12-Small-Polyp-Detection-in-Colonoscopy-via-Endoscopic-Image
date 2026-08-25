@@ -22,6 +22,7 @@ Based on the provided implementation, the repository is structured as follows:
 *   `05_preprocess_pipeline.py`: The core image preprocessing pipeline (Zero-DCE -> SAI -> DWT).
 *   `06_train_all.py` & `06b_train_seeds.py`: Automated training scripts for ablation studies and statistical validation.
 *   `clinical_fp.py`, `coco_fixed.py`, `compute_metrics.py`, `eval_coco_force.py`, `eval_test.py`, `statistical_val.py`: Comprehensive evaluation scripts for COCO metrics, false alarms, and computational efficiency.
+*   `12_benchmark_e2e.py`: Benchmarking script to rigorously measure the end-to-end inference latency, total FPS, and peak GPU memory (at batch=1 with a warm-up phase) for the complete proposed pipeline (Zero-DCE -> SAI -> DWT -> Detector).
 
 ### 2. Configuration & Results
 *   `p2_yolov12s.yaml`: The modified YOLO12 architecture file with the integrated P2 head.

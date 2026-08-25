@@ -49,4 +49,15 @@ The Google Drive contains the following directories:
 4.  Place the downloaded dataset folders in the root directory of this repository to match the paths expected by the training and evaluation scripts.
 
 ## Citation
-*-*
+
+This paper is currently under review. The citation information will be updated upon formal acceptance and publication. 
+
+If you find this repository and our proposed preprocessing pipeline useful for your research in the meantime, please consider starring this repository and citing it as follows:
+
+```bibtex
+@article{arifin2026p2yolo12,
+  title={P2-YOLO12: Small Polyp Detection in Colonoscopy via Endoscopic Image Preprocessing and a High-Resolution Detection Head},
+  author={Arifin, Samsul and Suciati, Nanik and Azhar, Daffa Muhammad},
+  journal={Under Review},
+  year={2026}
+}

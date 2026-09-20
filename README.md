@@ -29,6 +29,9 @@ Based on the provided implementation, the repository is structured as follows:
 *   `summary_Table_*.csv`: CSV files containing the complete summarized results of ablation studies, size-stratified evaluations, OOD performance, and SOTA comparisons as presented in the paper.
 *   `audit_out/`: Contains the audit trails and dataset split configurations (`manifest.csv`, `annotations.csv`, `splits.csv`).
 
+### 3. Best Model P2-YOLO12
+*   `Best Model P2-YOLO12.pt`: Best Model P2-YOLO12
+
 ## Datasets and External Files
 
 To ensure the repository remains lightweight and easily cloneable, the heavy raw datasets, preprocessed dataset versions, and pre-trained weights are hosted externally on Google Drive.

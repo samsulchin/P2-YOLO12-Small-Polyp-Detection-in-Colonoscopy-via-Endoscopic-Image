@@ -23,14 +23,37 @@ Based on the provided implementation, the repository is structured as follows:
 *   `06_train_all.py` & `06b_train_seeds.py`: Automated training scripts for ablation studies and statistical validation.
 *   `clinical_fp.py`, `coco_fixed.py`, `compute_metrics.py`, `eval_coco_force.py`, `eval_test.py`, `statistical_val.py`: Comprehensive evaluation scripts for COCO metrics, false alarms, and computational efficiency.
 *   `12_benchmark_e2e.py`: Benchmarking script to rigorously measure the end-to-end inference latency, total FPS, and peak GPU memory (at batch=1 with a warm-up phase) for the complete proposed pipeline (Zero-DCE -> SAI -> DWT -> Detector).
+*   `build_group_manifest.py`: **(new)** Builds the unified, per-image group-ID manifest used for leakage-free splitting across all four datasets (see [Data Splitting & Group-ID Manifest](#data-splitting--group-id-manifest-leakage-prevention) below).
 
 ### 2. Configuration & Results
 *   `p2_yolov12s.yaml`: The modified YOLO12 architecture file with the integrated P2 head.
 *   `summary_Table_*.csv`: CSV files containing the complete summarized results of ablation studies, size-stratified evaluations, OOD performance, and SOTA comparisons as presented in the paper.
 *   `audit_out/`: Contains the audit trails and dataset split configurations (`manifest.csv`, `annotations.csv`, `splits.csv`).
+*   `data_splits/all_datasets_group_manifest.csv`: **(new)** Per-image group-ID manifest for all four datasets (see below).
 
 ### 3. Model P2-YOLO12
 *   `Best Model P2-YOLO12.pt`: Pre-trained Model P2-YOLO12
+
+## Data Splitting & Group-ID Manifest (Leakage Prevention)
+
+To ensure that the reported in-distribution results are not inflated by data leakage (e.g., near-duplicate frames from the same colonoscopy sequence appearing in both training and test partitions), every image in every dataset is assigned a **group ID**, and the train/validation/test split is performed at the group level rather than the image level. Groups are never split across partitions.
+
+The grouping level used for each dataset reflects exactly what metadata is publicly available — we do not claim a finer grouping level than the source data actually supports:
+
+| Dataset | Grouping level | Source of group ID | Number of groups | Number of images |
+|---|---|---|---|---|
+| CVC-ClinicDB | Sequence | `sequence_id` field in the dataset's official `metadata.csv` | 29 | 612 |
+| PolypGen | Sequence | Native folder structure (`seq1`–`seq23`), one folder per colonoscopy procedure | 23 | 2,225 |
+| Kvasir-SEG | Image | N/A — no case, sequence, or patient metadata is publicly released for this dataset | 1,000 | 1,000 |
+| ETIS-LaribPolypDB | N/A (external test set) | Used in its entirety as a held-out external test set; not partitioned | — | 196 |
+
+**Reproducing the manifest:** running `build_group_manifest.py` against the four raw dataset folders regenerates `data_splits/all_datasets_group_manifest.csv`, a per-image table with the following columns:
+
+```
+dataset, image_path, mask_path, group_id, grouping_level, split
+```
+
+This file is provided so that reviewers and future users can verify, image by image, exactly which group and which split (`train` / `val` / `test` / `external_test`) each frame belongs to, and confirm that no group appears in more than one split.
 
 ## Datasets and External Files
 
@@ -50,6 +73,7 @@ The Google Drive contains the following directories:
 2.  Install the required dependencies: `pip install ultralytics pycocotools PyWavelets opencv-python torch pandas`.
 3.  Request access and download the datasets from the Google Drive link above.
 4.  Place the downloaded dataset folders in the root directory of this repository to match the paths expected by the training and evaluation scripts.
+5.  (Optional, for verifying data splits) Run `python build_group_manifest.py` to regenerate `data_splits/all_datasets_group_manifest.csv` from the raw dataset folders.
 
 ## Citation
 
@@ -64,3 +88,4 @@ If you find this repository and our proposed preprocessing pipeline useful for y
   journal={Under Review},
   year={2026}
 }
+```
